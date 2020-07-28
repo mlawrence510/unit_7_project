@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Layout */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 100px auto;
+
+}
+
+
+header {
+  background-color: blue;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  padding: 20px
+}
+
+nav {
+  background-color: darkblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+}
+
+.traffic-header {
+  display: flex;
+  align-items: center;
+}
+
+.traffic-nav {
+  display: flex;
+}
+
+.traffic-header h3 {
+  margin-right: auto;
+}
+
+.traffic-nav li {
+  padding-left: 25px;
+}
+
+.title {
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+.notificationIcon {
+  padding: 15px;
+  border-right: 2px solid darkblue;
+}
+
+.profileImg {
+  padding: 10px;
+}
+
+.profileName {
+  padding-right: 20px;
+}
+
+.navIcon {
+  height: 50px;
+  width: 50px;
+  padding: 10px 0;
+  margin: 0 15px;
+}
+
+.notificationIcon,
+.profileImg {
+  height: 35px;
+  width: 35px;
+}
+
+.profileImg {
+  border-radius: 100%;
+}
+
+
+
+.profileName,
+.title {
+  color: white;
+}
+
+.main-header-search {
+  margin-left: auto;
+}
+
+.main-header-search input {
+  height: 35px;
+  width: 250px;
+}
+
+.alert {
+  background: blue;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
