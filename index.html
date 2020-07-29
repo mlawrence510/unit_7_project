@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/toggle-switch.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <title>Dashboard</title>
   </head>
@@ -67,7 +68,7 @@
             </ul>
           </div>
           <div class="widget-container-full">
-            <img class="line-graph" src="img/line.png" alt="line">
+            <!-- DELETE <img class="line-graph" src="img/line.png" alt="line"> -->
             <canvas id="traffic-chart"></canvas>
           </div>
         </section>
@@ -76,16 +77,16 @@
         <section class="daily">
           <h3>DAILY TRAFFIC</h3>
           <div class="widget-container-half">
-            <img class="bar-graph" src="img/bar.png" alt="bar">
+            <!-- DELETE <img class="bar-graph" src="img/bar.png" alt="bar"> -->
             <canvas id="daily-chart"></canvas>
           </div>
         </section>
 
-        <!-- pie graph -->
+        <!-- pie chart -->
         <section class="mobile">
           <h3>MOBILE USERS</h3>
           <div class="widget-container-half">
-            <img class="bar-graph" src="img/pie.png" alt="pie">
+            <!-- DELETE <img class="bar-graph" src="img/pie.png" alt="pie"> -->
             <canvas id="mobile-users"></canvas>
           </div>
         </section>
@@ -198,7 +199,7 @@
         </section>
 
         <!-- recent activity widget -->
-        <section class="member activity">
+        <section class="members activity">
           <h3>Recent Activity</h3>
 
           <div class="members-container">
@@ -254,8 +255,27 @@
 
         <section class="settings">
           <h3>Settings</h3>
+          <div class="toggle">
+            <p>Hello</p>
+            <label class="switch">
+              <input type="checkbox" id="togBtn">
+              <div class="slider round">
+                <span class="on">ON</span>
+                <span class="off">OFF</span>
+              </div>
+            </label>
+          </div>
 
-          <!-- custom CSS toggle code -->
+          <div class="toggle">
+            <p>Goodbye</p>
+            <label class="switch">
+              <input type="checkbox" id="togBtn">
+              <div class="slider round">
+                <span class="on">ON</span>
+                <span class="off">OFF</span>
+              </div>
+            </label>
+          </div>
 
           <!-- custom CSS toggle code -->
 

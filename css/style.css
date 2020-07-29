@@ -9,11 +9,11 @@ ul {
   list-style-type: none;
 }
 
-.line-graph,
+/* .line-graph,
 .bar-graph,
 .pie-graph {
   width: 100%;
-}
+} */
 
 /* Layout */
 
@@ -71,10 +71,10 @@ nav {
 }
 
 
-/* Traffic Line Graph style */
+/* Graph style */
 
 .traffic {
-  padding: 30px 20px;
+  padding: 20px;
   border-bottom: 1px solid #6561c7;
   grid-area: traffic;
 }
@@ -98,25 +98,35 @@ nav {
 }
 
 .daily {
-  padding-top: 25px;
+  padding: 20px;
   grid-area: daily;
+}
+
+.widget-container-full {
+  background-color: yellow;
+  width: 90vw;
+  margin: 0 auto;
 }
 
 .widget-container-half {
   padding-top: 20px;
+  background-color: yellow;
+  width: 90vw;
+  margin: 0 auto;
 }
 
 .mobile {
-  padding-top: 25px;
+  padding: 20px;
   border-top: 1px solid #6561c7;
   grid-area: mobile;
 }
+
 
 /* Social style */
 
 .social-stats {
   border-top: 1px solid #6561c7;
-  padding: 25px 0;
+  padding: 20px;
   grid-area: social-stats;
 }
 
@@ -154,6 +164,181 @@ nav {
 
 .facebook {
   grid-area: facebook;
+}
+
+/* new members/recent activity */
+
+.members {
+  border-top: 1px solid #6561c7;
+  padding: 20px;
+}
+
+
+.members-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-image {
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+
+.members-text {
+  margin-right: auto;
+}
+
+/* message */
+
+.message {
+  padding: 20px;
+  border-top: 1px solid #6561c7;
+}
+
+.widget-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  height: 35px;
+  border-radius: 5px;
+  margin: 15px 0 0;
+}
+
+.form-area {
+  height: 100px;
+  border-radius: 5px;
+  margin: 15px 0 0;
+}
+
+.button-primary {
+  height: 30px;
+  border-radius: 5px;
+  margin: 15px 0 0;
+}
+
+/* settings */
+
+.settings {
+  padding: 20px;
+  border-top: 1px solid #6561c7;
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.toggle p {
+  width: 33%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+}
+
+.switch input {
+  display:none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ca2222;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2ab934;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(55px);
+  -ms-transform: translateX(55px);
+  transform: translateX(55px);
+}
+
+/*------ ADDED CSS ---------*/
+.on
+{
+  display: none;
+}
+
+.on, .off
+{
+  color: white;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
+}
+
+input:checked+ .slider .on
+{display: block;}
+
+input:checked + .slider .off
+{display: none;}
+
+/*--------- END --------*/
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* END */
+
+.settings-button {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings-button button {
+  width: 47%;
+}
+
+.button-disabled {
+  height: 30px;
+  border-radius: 5px;
+  margin: 15px 0 0;
 }
 
 .stat-title {
@@ -213,11 +398,6 @@ nav {
   grid-area: alert;
 }
 
-.profile-image {
-  height: 50px;
-  width: 50px;
-  border-radius: 100%;
-}
 
 .members {
   grid-area: members;
@@ -234,6 +414,8 @@ nav {
 .settings {
   grid-area: settings;
 }
+
+
 
 
 /* Media Queries */
@@ -254,12 +436,12 @@ nav {
     "main-header main-header"
     "alert alert"
     "traffic traffic"
-    "daily mobile"
+    "daily daily"
+    "mobile mobile"
     "social-stats social-stats"
     "members activity"
     "message settings";
   }
-
 
 
   nav {
@@ -273,6 +455,15 @@ nav {
     width: 25px;
   }
 
+  .widget-container-half,
+  .widget-container-full {
+    width: 87vw;
+  }
+
+  .mobile {
+    border-top: 1px solid #6561c7;
+  }
+
   .social-stats {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -281,4 +472,36 @@ nav {
       "stat-title stat-title stat-title"
       "twitter facebook google";
     }
+
+    .activity {
+      border-left: 1px solid #6561c7;
+    }
+
+    .settings {
+      border-left: 1px solid #6561c7;
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+    main {
+      grid-template-areas:
+      "main-header main-header"
+      "alert alert"
+      "traffic traffic"
+      "daily mobile"
+      "social-stats social-stats"
+      "members activity"
+      "message settings";
+    }
+
+    .mobile {
+      border-top: none;
+      border-left: 1px solid #6561c7;
+    }
+
+    .widget-container-half {
+      width: 40vw;
+    }
+
   }
