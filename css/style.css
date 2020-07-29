@@ -47,6 +47,44 @@ nav {
   justify-content: center;
 }
 
+/* header style */
+
+.notificationIcon {
+  padding: 13px 15px;
+  margin: 2px 0;
+  border-right: 2px solid #4c4e91;
+  height: 30px;
+  width: 30px;
+}
+
+
+.profileName {
+  padding-right: 20px;
+}
+
+
+.accountImg {
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  padding: 10px 10px 10px 20px;
+}
+
+
+
+/* nav style */
+
+.navIcon {
+  height: 40px;
+  width: 40px;
+  padding: 8px 13px;
+  margin: 2px
+}
+
+.navIcon:hover {
+  border-left: 3px white solid;
+}
+
 /* dashboard header */
 
 .main-header {
@@ -70,6 +108,32 @@ nav {
   width: 250px;
 }
 
+/* Alert */
+
+.alert {
+  grid-area: alert;
+}
+
+.alert-banner {
+  display: flex;
+  align-items: center;
+  background: #6561c7;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 20px;
+}
+
+.alertX {
+  margin-left: auto;
+  font-weight: 400;
+  padding: 2px 4px;
+  transform: scale(1.2, 1)
+}
+
+.alertX:hover {
+  cursor: pointer;
+}
 
 /* Graph style */
 
@@ -119,6 +183,11 @@ nav {
   padding: 20px;
   border-top: 1px solid #6561c7;
   grid-area: mobile;
+}
+
+.mobile h3,
+.daily h3 {
+  padding-bottom: 20px;
 }
 
 
@@ -191,6 +260,10 @@ nav {
   margin-right: auto;
 }
 
+.activity .members-container > p {
+  transform: scale(1.5, 2.5)
+}
+
 /* message */
 
 .message {
@@ -240,90 +313,7 @@ nav {
   width: 33%;
 }
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 90px;
-  height: 34px;
-}
 
-.switch input {
-  display:none;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ca2222;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2ab934;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(55px);
-  -ms-transform: translateX(55px);
-  transform: translateX(55px);
-}
-
-/*------ ADDED CSS ---------*/
-.on
-{
-  display: none;
-}
-
-.on, .off
-{
-  color: white;
-  position: absolute;
-  transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
-  font-size: 10px;
-  font-family: Verdana, sans-serif;
-}
-
-input:checked+ .slider .on
-{display: block;}
-
-input:checked + .slider .off
-{display: none;}
-
-/*--------- END --------*/
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-/* END */
 
 .settings-button {
   margin-top: auto;
@@ -351,33 +341,8 @@ input:checked + .slider .off
   padding-left: 20px;
 }
 
-.notificationIcon {
-  padding: 15px;
-  border-right: 2px solid #4c4e91;
-}
 
 
-.profileName {
-  padding-right: 20px;
-}
-
-.navIcon {
-  height: 40px;
-  width: 40px;
-  padding: 10px 0;
-  margin: 0 15px;
-}
-
-.notificationIcon,
-.accountImg {
-  height: 35px;
-  width: 35px;
-}
-
-.accountImg {
-  border-radius: 100%;
-  padding: 10px;
-}
 
 
 
@@ -386,18 +351,6 @@ input:checked + .slider .off
 .title {
   color: white;
 }
-
-
-
-.alert {
-  background: #6561c7;
-  color: white;
-  border-radius: 5px;
-  padding: 10px 15px;
-  margin: 20px;
-  grid-area: alert;
-}
-
 
 .members {
   grid-area: members;
@@ -474,9 +427,6 @@ input:checked + .slider .off
       "twitter facebook google";
     }
 
-    .activity {
-      border-left: 1px solid #6561c7;
-    }
 
     .settings {
       border-left: 1px solid #6561c7;
@@ -503,6 +453,10 @@ input:checked + .slider .off
 
     .widget-container-half {
       width: 40vw;
+    }
+
+    .activity {
+      border-left: 1px solid #6561c7;
     }
 
   }
