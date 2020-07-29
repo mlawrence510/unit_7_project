@@ -1,5 +1,9 @@
 const alertBanner = document.querySelector('#alert');
 
+const user = document.querySelector('#userField');
+const message = document.querySelector('#messageField');
+const send = document.querySelector('#send');
+
 const trafficCanvas = document.querySelector('#traffic-chart');
 const dailyCanvas = document.querySelector('#daily-chart');
 const mobileCanvas = document.querySelector('#mobile-users');
@@ -20,6 +24,33 @@ alertBanner.innerHTML =
       alertBanner.style.display = 'none'
     }
   });
+
+
+// Messaging Section
+
+
+send.addEventListener('click', () => {
+// checks to see if user and message field are filled Layout
+  if (user.value === '' && message.value === ''){
+    alert('Please fill out user and message fields before sending.');
+    event.preventDefault();
+  } else if (user.value === '') {
+    alert('Please fill out user field before sending.')
+    event.preventDefault();
+  } else if (message.value === '') {
+    alert('Please fill out message field before sending.')
+    event.preventDefault();
+  } else {
+    alert(`Message sucessfully sent to: ${user.value}.`)
+  }
+});
+
+
+
+
+
+
+
 
 // LINE GRAPH CODE
 
