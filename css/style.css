@@ -191,6 +191,37 @@ nav {
 
 /* Social style */
 
+.social-image {
+  background-color: #7477BF;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+.twitterSVG {
+  padding-top: 10%;
+}
+
+.googleSVG,
+.twitterSVG {
+ height: 25px;
+ width: 25px;
+ margin: auto;
+}
+
+.facebookSVG {
+  height: 30px;
+  width: 30px;
+}
+
+.social-icon path {
+   fill: #fff;
+}
+
 .social-stats {
   border-top: 1px solid #7477BF;
   padding: 20px;
@@ -207,13 +238,6 @@ nav {
 }
 
 
-
-.social-icon {
- height: 50px;
- width: 50px;
- padding-right: 20px;
-}
-
 .social-text p:nth-child(1) {
   font-weight: 500;
 }
@@ -222,6 +246,7 @@ nav {
   font-size: 30px;
   font-weight: 100;
 }
+
 
 .twitter {
   grid-area: twitter;
