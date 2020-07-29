@@ -30,7 +30,7 @@ ul {
 
 header {
   grid-area: header;
-  background-color: #6561c7;
+  background-color: #7477BF;
   display: flex;
   align-items: center;
 }
@@ -117,7 +117,7 @@ nav {
 .alert-banner {
   display: flex;
   align-items: center;
-  background: #6561c7;
+  background: #7477BF;
   color: white;
   border-radius: 5px;
   padding: 10px 15px;
@@ -139,7 +139,7 @@ nav {
 
 .traffic {
   padding: 20px;
-  border-bottom: 1px solid #6561c7;
+  border-bottom: 1px solid #7477BF;
   grid-area: traffic;
 }
 
@@ -167,21 +167,19 @@ nav {
 }
 
 .widget-container-full {
-  background-color: yellow;
   width: 90vw;
   margin: 0 auto;
 }
 
 .widget-container-half {
   padding-top: 20px;
-  background-color: yellow;
   width: 90vw;
   margin: 0 auto;
 }
 
 .mobile {
   padding: 20px;
-  border-top: 1px solid #6561c7;
+  border-top: 1px solid #7477BF;
   grid-area: mobile;
 }
 
@@ -194,14 +192,14 @@ nav {
 /* Social style */
 
 .social-stats {
-  border-top: 1px solid #6561c7;
+  border-top: 1px solid #7477BF;
   padding: 20px;
   grid-area: social-stats;
 }
 
 .social-container {
   display: flex;
-  border: 1px solid #6561c7;
+  border: 1px solid #7477BF;
   border-radius: 5px;
   align-items: center;
   padding: 15px 15px 15px 40px;
@@ -238,7 +236,7 @@ nav {
 /* new members/recent activity */
 
 .members {
-  border-top: 1px solid #6561c7;
+  border-top: 1px solid #7477BF;
   padding: 20px;
 }
 
@@ -268,7 +266,7 @@ nav {
 
 .message {
   padding: 20px;
-  border-top: 1px solid #6561c7;
+  border-top: 1px solid #7477BF;
 }
 
 .widget-container {
@@ -298,7 +296,7 @@ nav {
 
 .settings {
   padding: 20px;
-  border-top: 1px solid #6561c7;
+  border-top: 1px solid #7477BF;
   display: flex;
   flex-direction: column;
 }
@@ -415,7 +413,7 @@ nav {
   }
 
   .mobile {
-    border-top: 1px solid #6561c7;
+    border-top: 1px solid #7477BF;
   }
 
   .social-stats {
@@ -429,7 +427,7 @@ nav {
 
 
     .settings {
-      border-left: 1px solid #6561c7;
+      border-left: 1px solid #7477BF;
     }
   }
 
@@ -448,7 +446,7 @@ nav {
 
     .mobile {
       border-top: none;
-      border-left: 1px solid #6561c7;
+      border-left: 1px solid #7477BF;
     }
 
     .widget-container-half {
@@ -456,7 +454,7 @@ nav {
     }
 
     .activity {
-      border-left: 1px solid #6561c7;
+      border-left: 1px solid #7477BF;
     }
 
   }
