@@ -97,7 +97,7 @@ settings.addEventListener('click', e => {
 // LINE GRAPH CODE
 
 let trafficData = {
-    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20,26", "27-3", "4-10", "11-17", "18-24", "25,31"],
+    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
       data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
       background: 'rgba(116, 119, 191, .3)',
@@ -139,18 +139,27 @@ chartSelect.addEventListener('click', e => {
 
 
   let trafficData0 = {
-      labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20,26", "27-3", "4-10", "11-17", "18-24", "25,31"],
+      labels: ["8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm"],
       datasets: [{
-        data: [150, 1050, 700, 300, 700, 2050, 650, 1050, 1850, 300, 500],
+        data: [50, 150, 70, 30, 70, 205, 65, 105, 150, 30, 50],
         background: 'rgba(116, 119, 191, .3)',
         borderWidth: 1,
       }]
     };
 
-    let trafficData1 = {
-        labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20,26", "27-3", "4-10", "11-17", "18-24", "25,31"],
+  let trafficData1 = {
+      labels: ["7/20", "7/21", "7/22", "7/23", "7/24", "7/25", "7/26", "7/27", "7/28", "7/29", "7/30"],
+      datasets: [{
+        data: [750, 650, 860, 400, 1050, 650, 870, 875, 800, 675, 550],
+        background: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1,
+      }]
+    };
+
+    let trafficData3 = {
+        labels: ["Sep.", "Oct.", "Nov.", "Dec.", "Jan.", "Feb.", "March", "Apr.", "May", "June", "July"],
         datasets: [{
-          data: [750, 1750, 100, 300, 200, 2650, 1050, 150, 850, 600, 300],
+          data: [7500, 9700, 10000, 8300, 9200, 7650, 10050, 7150, 9850, 7600, 9300],
           background: 'rgba(116, 119, 191, .3)',
           borderWidth: 1,
         }]
@@ -169,6 +178,7 @@ chartSelect.addEventListener('click', e => {
       }
     }
   };
+
 
 
 
@@ -220,11 +230,56 @@ chartSelect.addEventListener('click', e => {
         data: trafficData1,
         options: trafficOptions
       });
-      }
+    } else if (i === 2){
+        let trafficOptions = {
+          aspectRatio: 2.5,
+          animation: {
+            duration: 0
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero:true
+              }
+            }]
+          },
+          legend : {
+            display: false
+          }
+        };
+
+        let trafficChart = new Chart(trafficCanvas, {
+          type: 'line',
+          data: trafficData,
+          options: trafficOptions
+        });
+      } else if (i === 3){
+          let trafficOptions = {
+            aspectRatio: 2.5,
+            animation: {
+              duration: 0
+            },
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero:true
+                }
+              }]
+            },
+            legend : {
+              display: false
+            }
+          };
+
+          let trafficChart = new Chart(trafficCanvas, {
+            type: 'line',
+            data: trafficData3,
+            options: trafficOptions
+          });
+          }
+
     }
-    };
-
-
+  };
 
   removeClass();
   addClass();
