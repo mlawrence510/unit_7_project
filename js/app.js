@@ -1,6 +1,8 @@
 const alertBanner = document.querySelector('#alert');
 const notifications = document.querySelector('.notify')
 
+const chartSelect = document.querySelector('.traffic-nav');
+
 const user = document.querySelector('#userField');
 const message = document.querySelector('#messageField');
 const send = document.querySelector('#send');
@@ -52,6 +54,8 @@ alertBanner.innerHTML =
   });
 
 
+
+
 // Messaging Section
 
 
@@ -90,23 +94,6 @@ settings.addEventListener('click', e => {
 });
 
 
-
-
-
-  // if (target.className === 'emailToggle') {
-  //   if (sliderEmailCheck === false) {
-  //     sliderEmailCheck = true;
-  //     console.log('help');
-  //   } else if (sliderEmailCheck) {
-  //     sliderEmailCheck = false;
-  //     console.log('noooo');
-  //   }
-  // }
-
-// ADD CODE HERE
-
-
-
 // LINE GRAPH CODE
 
 let trafficData = {
@@ -139,6 +126,38 @@ let trafficChart = new Chart(trafficCanvas, {
   type: 'line',
   data: trafficData,
   options: trafficOptions
+});
+
+
+
+// Change line graph
+
+chartSelect.addEventListener('click', e => {
+  let target = e.target;
+  let text = target.textContent;
+  let lis = document.querySelectorAll('.traffic-nav-link');
+
+
+  function removeClass() {
+    for (let i = 0; i < lis.length; i++) {
+      lis[i].className = `traffic-nav-link`;
+    }
+  };
+
+  function addClass() {
+    for (let i = 0; i < lis.length; i++) {
+    if (text === lis[i].textContent) {
+      lis[i].className = `traffic-nav-link active`;
+      }
+    }
+  };
+
+  trafficData.datasets.data = [150, 1050, 700, 300, 700, 2050, 650, 1050, 1850, 300, 500];
+
+
+  removeClass();
+  addClass();
+
 });
 
 // BAR GRAPH
