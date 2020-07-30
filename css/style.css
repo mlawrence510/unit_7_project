@@ -9,6 +9,11 @@ ul {
   list-style-type: none;
 }
 
+h3 {
+  font-size: 16px;
+}
+
+
 /* .line-graph,
 .bar-graph,
 .pie-graph {
@@ -57,17 +62,27 @@ nav {
   width: 30px;
 }
 
-
 .profileName {
-  padding-right: 20px;
+  padding-right: 10px;
+  font-size: 16px;
 }
-
 
 .accountImg {
   height: 35px;
   width: 35px;
   border-radius: 100%;
   padding: 10px 10px 10px 20px;
+}
+
+.title {
+  margin-right: auto;
+  padding-left: 10px;
+}
+
+
+.profileName,
+.title {
+  color: white;
 }
 
 
@@ -96,6 +111,7 @@ nav {
 
 .headline {
   padding-top: 20px;
+  font-size: 16px;
 }
 
 .main-header-search {
@@ -105,7 +121,7 @@ nav {
 
 .main-header-search input {
   height: 35px;
-  width: 250px;
+  width: 225px;
 }
 
 /* Alert */
@@ -223,9 +239,13 @@ nav {
 }
 
 .social-stats {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   border-top: 1px solid #7477BF;
   padding: 20px;
   grid-area: social-stats;
+  justify-content: space-between;
 }
 
 .social-container {
@@ -233,8 +253,10 @@ nav {
   border: 1px solid #7477BF;
   border-radius: 5px;
   align-items: center;
-  padding: 15px 15px 15px 40px;
+  justify-content: center;
+  padding: 15px 15px 15px 15px;
   margin: 15px;
+  width: 75%;
 }
 
 
@@ -267,7 +289,6 @@ nav {
   padding: 20px;
 }
 
-
 .members-container {
   display: flex;
   align-items: center;
@@ -281,8 +302,18 @@ nav {
   margin-right: 15px;
 }
 
+.date {
+  font-size: 13px;
+}
+
 .members-text {
   margin-right: auto;
+  font-size: 13px;
+}
+
+.members-text a {
+  text-decoration: none;
+  color: #7477BF;
 }
 
 .activity .members-container > p {
@@ -305,12 +336,15 @@ nav {
   height: 35px;
   border-radius: 5px;
   margin: 15px 0 0;
+  padding-left: 10px;
 }
 
 .form-area {
   height: 100px;
   border-radius: 5px;
   margin: 15px 0 0;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 .button-primary {
@@ -361,22 +395,6 @@ nav {
 }
 
 
-.title {
-  margin-right: auto;
-  padding-left: 20px;
-}
-
-
-
-
-
-
-
-.profileName,
-.title {
-  color: white;
-}
-
 .members {
   grid-area: members;
 }
@@ -423,6 +441,11 @@ nav {
   }
 
 
+  .title {
+    padding-left: 20px;
+  }
+
+
   nav {
     flex-direction: column;
     justify-content: flex-start;
@@ -443,6 +466,10 @@ nav {
     border-top: 1px solid #7477BF;
   }
 
+  .social-container {
+    width: auto;
+  }
+
   .social-stats {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -452,10 +479,17 @@ nav {
       "twitter facebook google";
     }
 
+    .profileName {
+      padding-right: 20px;
+    }
 
     .settings {
       border-left: 1px solid #7477BF;
     }
+  }
+
+  .headline {
+    font-size: 20px;
   }
 
   @media (min-width: 1024px) {
