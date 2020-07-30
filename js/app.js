@@ -138,6 +138,24 @@ chartSelect.addEventListener('click', e => {
   let lis = document.querySelectorAll('.traffic-nav-link');
 
 
+  let trafficData0 = {
+      labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20,26", "27-3", "4-10", "11-17", "18-24", "25,31"],
+      datasets: [{
+        data: [150, 1050, 700, 300, 700, 2050, 650, 1050, 1850, 300, 500],
+        background: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1,
+      }]
+    };
+
+    let trafficData1 = {
+        labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20,26", "27-3", "4-10", "11-17", "18-24", "25,31"],
+        datasets: [{
+          data: [750, 1750, 100, 300, 200, 2650, 1050, 150, 850, 600, 300],
+          background: 'rgba(116, 119, 191, .3)',
+          borderWidth: 1,
+        }]
+      };
+
   function removeClass() {
     for (let i = 0; i < lis.length; i++) {
       lis[i].className = `traffic-nav-link`;
@@ -152,7 +170,60 @@ chartSelect.addEventListener('click', e => {
     }
   };
 
-  trafficData.datasets.data = [150, 1050, 700, 300, 700, 2050, 650, 1050, 1850, 300, 500];
+
+
+  for (let i = 0; i < lis.length; i++) {
+  if (text === lis[i].textContent) {
+    if (i === 0){
+      let trafficOptions = {
+        aspectRatio: 2.5,
+        animation: {
+          duration: 0
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero:true
+            }
+          }]
+        },
+        legend : {
+          display: false
+        }
+      };
+
+      let trafficChart = new Chart(trafficCanvas, {
+        type: 'line',
+        data: trafficData0,
+        options: trafficOptions
+      });
+    } else if (i === 1){
+      let trafficOptions = {
+        aspectRatio: 2.5,
+        animation: {
+          duration: 0
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero:true
+            }
+          }]
+        },
+        legend : {
+          display: false
+        }
+      };
+
+      let trafficChart = new Chart(trafficCanvas, {
+        type: 'line',
+        data: trafficData1,
+        options: trafficOptions
+      });
+      }
+    }
+    };
+
 
 
   removeClass();
