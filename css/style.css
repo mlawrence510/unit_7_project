@@ -14,6 +14,8 @@ h3 {
 }
 
 
+
+
 /* .line-graph,
 .bar-graph,
 .pie-graph {
@@ -54,6 +56,30 @@ nav {
 
 /* header style */
 
+.notify {
+  position: relative;
+}
+
+.notify:hover {
+  cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #7477BF;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
 .notificationIcon {
   padding: 13px 15px;
   margin: 2px 0;
@@ -93,12 +119,9 @@ nav {
   height: 40px;
   width: 40px;
   padding: 8px 13px;
-  margin: 2px
+  margin: 2px;
 }
 
-.navIcon:hover {
-  border-left: 3px white solid;
-}
 
 /* dashboard header */
 
@@ -122,6 +145,7 @@ nav {
 .main-header-search input {
   height: 35px;
   width: 225px;
+  padding-left: 10px;
 }
 
 /* Alert */
@@ -337,6 +361,7 @@ nav {
   border-radius: 5px;
   margin: 15px 0 0;
   padding-left: 10px;
+  width: 100%;
 }
 
 .form-area {
@@ -352,6 +377,44 @@ nav {
   border-radius: 5px;
   margin: 15px 0 0;
 }
+
+
+
+.autocomplete {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+  background-color: #7477BF;
+  color: #ffffff;
+}
+
+
+
 
 /* settings */
 
@@ -455,6 +518,10 @@ nav {
   .navIcon {
     height: 25px;
     width: 25px;
+  }
+
+  .navIcon:hover {
+    border-left: 3px white solid;
   }
 
   .widget-container-half,
