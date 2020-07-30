@@ -11,6 +11,18 @@ const mobileCanvas = document.querySelector('#mobile-users');
 
 let members = ['Molly Tuttle', 'Joe Armstrong', 'Victoria Chambers', 'Graham Issac'];
 
+const settings = document.querySelector('.settings');
+const timezone = document.querySelector('#timezone');
+
+window.onload = settingsLoad;
+
+
+function settingsLoad() {
+  if (localStorage.length !== 0) {
+  timezone.value = localStorage.getItem('selectedTimezone');
+  }
+}
+
 
 notifications.addEventListener('click', () => {
   const notifyCircle = document.querySelector('.notifyCircle');
@@ -61,8 +73,37 @@ send.addEventListener('click', () => {
 
 
 
+// Settings Save
 
 
+settings.addEventListener('click', e => {
+  let target = e.target;
+  if (target.textContent === 'Cancel') {
+    localStorage.clear();
+    timezone.value = 'Select a Timezone';
+  } else if (target.textContent === 'Save') {
+  localStorage.setItem('selectedTimezone', timezone.value);
+  console.log(localStorage.getItem('selectedTimezone'));
+  }
+
+
+});
+
+
+
+
+
+  // if (target.className === 'emailToggle') {
+  //   if (sliderEmailCheck === false) {
+  //     sliderEmailCheck = true;
+  //     console.log('help');
+  //   } else if (sliderEmailCheck) {
+  //     sliderEmailCheck = false;
+  //     console.log('noooo');
+  //   }
+  // }
+
+// ADD CODE HERE
 
 
 
