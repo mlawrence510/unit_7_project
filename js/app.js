@@ -1,5 +1,5 @@
 const alertBanner = document.querySelector('#alert');
-const notifications = document.querySelector('.notify')
+const notifications = document.querySelector('.notify');
 
 const chartSelect = document.querySelector('.traffic-nav');
 
@@ -15,16 +15,23 @@ let members = ['Molly Tuttle', 'Joe Armstrong', 'Victoria Chambers', 'Graham Iss
 
 const settings = document.querySelector('.settings');
 const timezone = document.querySelector('#timezone');
+const public = document.querySelector('.publicToggle');
+const email = document.querySelector('.emailToggle');
+
+
+// Load saved settings
 
 window.onload = settingsLoad;
-
 
 function settingsLoad() {
   if (localStorage.length !== 0) {
   timezone.value = localStorage.getItem('selectedTimezone');
+  public.checked = localStorage.getItem('publicProfile');
+  email.checked = localStorage.getItem('emailOption');
   }
 }
 
+// Notification Bell
 
 notifications.addEventListener('click', () => {
   const notifyCircle = document.querySelector('.notifyCircle');
@@ -38,6 +45,8 @@ notifications.addEventListener('click', () => {
 });
 
 
+// Alert Banner
+
 alertBanner.innerHTML =
   `
   <div class="alert-banner">
@@ -49,7 +58,7 @@ alertBanner.innerHTML =
   alertBanner.addEventListener('click', e=> {
     const element = e.target;
     if (element.classList.contains("alertX")) {
-      alertBanner.style.display = 'none'
+      alertBanner.style.display = 'none';
     }
   });
 
@@ -65,13 +74,13 @@ send.addEventListener('click', () => {
     alert('Please fill out user and message fields before sending.');
     event.preventDefault();
   } else if (user.value === '') {
-    alert('Please fill out user field before sending.')
+    alert('Please fill out user field before sending.');
     event.preventDefault();
   } else if (message.value === '') {
-    alert('Please fill out message field before sending.')
+    alert('Please fill out message field before sending.');
     event.preventDefault();
   } else {
-    alert(`Message sucessfully sent to: ${user.value}.`)
+    alert(`Message sucessfully sent to: ${user.value}.`);
   }
 });
 
@@ -85,9 +94,13 @@ settings.addEventListener('click', e => {
   if (target.textContent === 'Cancel') {
     localStorage.clear();
     timezone.value = 'Select a Timezone';
+    email.checked = false;
+    public.checked = false;
   } else if (target.textContent === 'Save') {
   localStorage.setItem('selectedTimezone', timezone.value);
-  console.log(localStorage.getItem('selectedTimezone'));
+  localStorage.setItem('publicProfile', public.checked);
+  localStorage.setItem('emailOption', email.checked);
+
   }
 
 
@@ -169,7 +182,7 @@ chartSelect.addEventListener('click', e => {
     for (let i = 0; i < lis.length; i++) {
       lis[i].className = `traffic-nav-link`;
     }
-  };
+  }
 
   function addClass() {
     for (let i = 0; i < lis.length; i++) {
@@ -177,7 +190,7 @@ chartSelect.addEventListener('click', e => {
       lis[i].className = `traffic-nav-link active`;
       }
     }
-  };
+  }
 
 
 
@@ -279,7 +292,7 @@ chartSelect.addEventListener('click', e => {
           }
 
     }
-  };
+  }
 
   removeClass();
   addClass();
@@ -341,7 +354,7 @@ const mobileOptions = {
       fontStyles: 'bold'
     }
   }
-}
+};
 
 let mobileChart = new Chart(mobileCanvas, {
   type: 'doughnut',

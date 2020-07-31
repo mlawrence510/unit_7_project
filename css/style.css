@@ -38,13 +38,6 @@ main {
   grid-area: main;
 }
 
-nav {
-  grid-area: nav;
-  background-color: #4c4e91;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 /* header style */
 
@@ -115,8 +108,17 @@ nav {
   margin: 2px;
 }
 
+nav {
+  grid-area: nav;
+  background-color: #4c4e91;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* dashboard header */
+
 
 .main-header {
   grid-area: main-header;
@@ -141,7 +143,9 @@ nav {
   padding-left: 10px;
 }
 
+
 /* Alert */
+
 
 .alert {
   grid-area: alert;
@@ -442,13 +446,14 @@ nav {
 }
 
 .toggle p {
-  width: 33%;
+  width: 50%;
 }
 
-
+#timezone {
+  margin-top: auto;
+}
 
 .settings-button {
-  margin-top: auto;
   display: flex;
   justify-content: space-between;
 }
