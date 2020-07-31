@@ -73,6 +73,30 @@ main {
   width: 30px;
 }
 
+@keyframes bellMove {
+  20% {
+    transform: rotate(15deg)
+  }
+  40% {
+    transform: rotate(-15deg)
+  }
+  60% {
+    transform: rotate(15deg)
+  }
+  80% {
+    transform: rotate(-15deg)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}
+
+.notificationIcon:hover .st0 {
+  animation: bellMove 1s;
+  transform-origin: 50% 50%;
+}
+
+
 .profileName {
   padding-right: 10px;
   font-size: 16px;

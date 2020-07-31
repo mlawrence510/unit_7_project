@@ -26,8 +26,15 @@ window.onload = settingsLoad;
 function settingsLoad() {
   if (localStorage.length !== 0) {
   timezone.value = localStorage.getItem('selectedTimezone');
-  public.checked = localStorage.getItem('publicProfile');
-  email.checked = localStorage.getItem('emailOption');
+
+  if (localStorage.getItem('publicProfile') === 'true') {
+    public.checked = true;
+  } else public.checked = false;
+
+  if (localStorage.getItem('emailOption') === 'true') {
+    email.checked = true;
+  } else email.checked = false;
+
   }
 }
 
